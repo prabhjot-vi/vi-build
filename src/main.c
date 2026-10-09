@@ -44,17 +44,22 @@ struct string *string_new(const char *c_string) {
   }
 
   if (c_string[string_length] != '\0') {
-    
+    perror("c_string should be null terminating");
+    return NULL;
   }
 
   struct string *string = (struct string*) malloc(sizeof(struct string));
 
-  
+  string->length = string_length;
+  string->offset = 0;
+  string->ptr = (char*) malloc(sizeof(char) * string_length); 
 
   return string;
 }
 
 int main() {
-  const char *file_name = "src/main.cpp";
+  struct string *file_name = string_new("hello.txt");
+
+  // printf("%*s", (int) file_name->length, file_name->ptr);
   return 0;
 }
