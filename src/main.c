@@ -1,6 +1,25 @@
 #include <stdio.h>
 #include "arena.h"
 
+#include <string.h>
+
+struct string {
+  size_t size;
+  size_t offset;
+  char *ptr;
+};
+
+struct string *new_string(struct arena *arena, const char *c_string) {
+  if (strlen(c_string) == 0) {
+    perror("c_string is empty");
+    return NULL;
+  }
+
+  struct string *string;
+
+  return string;
+}
+
 int main() {
 
   static int ARENA_SIZE = 10;
