@@ -18,6 +18,8 @@ int main() {
   for (size_t i = 0; i < A_SIZE; i++) {
     printf("%ld: %d\n", i, a[i]);
   }
+
+  free_arena(arena);
   
   return 0;
 }
