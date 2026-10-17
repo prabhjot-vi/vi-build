@@ -1,0 +1,14 @@
+{
+    "name": "vi-build",
+    "image": "mcr.microsoft.com/devcontainers/cpp:debian13",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools-extension-pack",
+                "ms-vscode.makefile-tools",
+                "streetsidesoftware.code-spell-checker",
+                "DavidAnson.vscode-markdownlint"
+            ]
+        }
+    }
+}
